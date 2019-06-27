@@ -7,7 +7,6 @@ public class Main {
         flacon.open();
         flacon.drink(100);
         System.out.println("Bottle have "+ flacon.availableLiquid() + " ml left");
-        flacon.drink(100);
         flacon.open();
         flacon.drink(400);
         flacon.drink(-400);
