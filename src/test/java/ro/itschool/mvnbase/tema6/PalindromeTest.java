@@ -1,4 +1,4 @@
-package ro.itschool.mvnbase;
+package ro.itschool.mvnbase.tema6;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
