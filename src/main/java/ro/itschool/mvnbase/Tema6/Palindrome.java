@@ -9,28 +9,17 @@ public class Palindrome {
             rebmun = rebmun * 10 + copy % 10;
             copy /= 10;
         }
-        System.out.println(rebmun);
-        if (number == rebmun) {
-            return true;
-        } else {
-            return false;
-        }
+        return number == rebmun;
     }
 
     public static boolean palStringCheck(String word) {
-        word = word.replaceAll("\\s","").replaceAll("[^a-zA-Z ]", "").toLowerCase();;
+        word = word.replaceAll("\\s","").replaceAll("[^a-zA-Z ]", "").toLowerCase();
         String drow = "";
         int i = word.length() - 1;
-        int j = word.length();
-        while (j != 0) {
-            drow += word.substring(i, j);
+        while (i != -1) {
+            drow += word.charAt(i);
             i--;
-            j--;
         }
-        if (word.equals(drow)) {
-            return true;
-        } else {
-            return false;
-        }
+        return word.equals(drow);
     }
 }
