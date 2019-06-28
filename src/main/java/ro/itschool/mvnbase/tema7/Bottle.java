@@ -2,8 +2,8 @@ package ro.itschool.mvnbase.tema7;
 
 public class Bottle implements Containers {
 
-    private int availableLiquid;
     private int totalCapacity;
+    private int availableLiquid;
     private boolean cap;
 
     Bottle(int capacity) {
@@ -12,45 +12,45 @@ public class Bottle implements Containers {
         this.cap = true;
     }
 
-    public int totalCapacity() {
-        return totalCapacity;
+    public boolean hasMore() {
+        return availableLiquid > 0;
     }
 
     public int availableLiquid() {
         return availableLiquid;
     }
 
-    public void open() {
-        System.out.println("The bottle is opened");
-        cap = false;
-    }
-
-    public void close() {
-        System.out.println("The bottle is closed");
-        cap = true;
-    }
-
     public int emptySpace() {
         return totalCapacity - availableLiquid;
     }
 
+    public int totalCapacity() {
+        return totalCapacity;
+    }
+
+    public void open() {
+        this.cap = false;
+        System.out.println("The bottle is opened");
+    }
+
+    public void close() {
+        this.cap = true;
+        System.out.println("The bottle is closed");
+    }
+
     public void drink(int amount) {
         if (cap == false) {
-            if (amount < availableLiquid()  && amount > 0 ) {
+            if (amount <= availableLiquid && amount > 0) {
                 this.availableLiquid -= amount;
                 System.out.println("You drank " + amount + " ml");
                 close();
-            }
-            else if(amount <= 0){
+            } else if (amount <= 0) {
                 System.out.println("The amount should be greater then 0");
+            } else {
+                System.out.println("The bottle has less liquid");
             }
-            else {
-                System.out.println("You can't drink that amount because the bottle has less liquid");
-            }
-        }
-        else {
+        } else {
             System.out.println("You can't drink, you must open the bottle first!");
         }
-
     }
 }

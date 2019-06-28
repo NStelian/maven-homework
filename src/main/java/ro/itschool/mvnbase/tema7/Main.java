@@ -15,5 +15,4 @@ public class Main {
         System.out.println("You drank in total "+ flacon.emptySpace() + " ml");
         System.out.println("Total capacity: "+flacon.totalCapacity()+" ml");
     }
-
 }
