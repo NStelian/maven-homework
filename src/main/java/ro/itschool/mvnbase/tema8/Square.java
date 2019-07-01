@@ -4,6 +4,7 @@ public class Square extends SideShape {
     private int side;
 
     public Square(int side) {
+        super(4);
         this.side = side;
     }
 
@@ -13,9 +14,5 @@ public class Square extends SideShape {
 
     public double getPerimeter() {
         return side * 4;
-    }
-
-    public int getNoOfSides() {
-        return 4;
     }
 }

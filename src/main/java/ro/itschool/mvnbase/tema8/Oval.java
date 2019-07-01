@@ -5,6 +5,7 @@ public class Oval extends RoundShape {
     private double largeRadius;
 
     public Oval(double smallRadius, double largeRadius) {
+        super(0, 0);
         this.smallRadius = smallRadius;
         this.largeRadius = largeRadius;
     }

@@ -1,8 +1,13 @@
 package ro.itschool.mvnbase.tema8;
 
 public abstract class RoundShape implements Shape {
-    private int centerX = 0;
-    private int centerY = 0;
+    private int centerX;
+    private int centerY;
+
+    public RoundShape(int centerX, int centerY) {
+        this.centerX = centerX;
+        this.centerY = centerY;
+    }
 
     public int getCenterX() {
         return centerX;

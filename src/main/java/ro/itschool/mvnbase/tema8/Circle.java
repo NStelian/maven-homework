@@ -4,6 +4,7 @@ public class Circle extends RoundShape {
     private double radius;
 
     public Circle(int radius) {
+        super(0, 0);
         this.radius = radius;
     }
 

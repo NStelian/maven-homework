@@ -5,6 +5,7 @@ public class Rectangle extends SideShape {
     private int largeSide;
 
     public Rectangle(int smallSide, int largeSide) {
+        super(4);
         this.smallSide = smallSide;
         this.largeSide = largeSide;
     }
