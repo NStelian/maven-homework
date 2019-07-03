@@ -1,0 +1,8 @@
+package ro.itschool.mvnbase.tema9;
+
+public class UpperCaseFormatter implements TextFormatter {
+    @Override
+    public String format(String text) {
+        return text.toUpperCase();
+    }
+}
