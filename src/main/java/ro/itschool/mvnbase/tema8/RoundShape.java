@@ -4,7 +4,7 @@ public abstract class RoundShape implements Shape {
     private int centerX;
     private int centerY;
 
-    public RoundShape(int centerX, int centerY) {
+    protected RoundShape(int centerX, int centerY) {
         this.centerX = centerX;
         this.centerY = centerY;
     }
