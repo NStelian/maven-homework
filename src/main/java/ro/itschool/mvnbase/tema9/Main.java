@@ -10,5 +10,8 @@ public class Main {
 
         NSATextFormatter nsa = new NSATextFormatter();
         System.out.println(nsa.format("we can't talk about NSA"));
+
+        ChangeTextFormatter change = new ChangeTextFormatter("mere","pere");
+        System.out.println(change.format("Eu am mere"));
     }
 }
