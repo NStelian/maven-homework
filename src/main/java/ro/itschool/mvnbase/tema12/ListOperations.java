@@ -4,19 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListOperations {
-    private final List<String> first;
-    private final List<String> second;
-
-    public ListOperations(List<String> first, List<String> second) {
-        this.first = first;
-        this.second = second;
-    }
-
-    public boolean compare() {
+    public boolean compare(List<String> first, List<String> second) {
         return first.equals(second);
     }
 
-    public List<String> intersect() {
+    public List<String> intersect(List<String> first, List<String> second) {
         List<String> result = new ArrayList<>();
         for (String word : first) {
             for (String word2 : second) {
@@ -28,7 +20,7 @@ public class ListOperations {
         return result;
     }
 
-    public List<String> union() {
+    public List<String> union(List<String> first, List<String> second) {
         List<String> result = new ArrayList<>();
         for (String word : first) {
             if (!result.contains(word)) {
@@ -43,7 +35,7 @@ public class ListOperations {
         return result;
     }
 
-    public List<String> subtract() {
+    public List<String> subtract(List<String> first, List<String> second) {
         List<String> result = new ArrayList<>(first);
         for (String word : second) {
             if (result.contains(word)) {

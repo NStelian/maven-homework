@@ -8,11 +8,11 @@ public class Main {
         List<String> first = List.of("unu", "doi", "trei");
         List<String> second = List.of("unu", "doi", "patru");
 
-        ListOperations listOperations = new ListOperations(first, second);
+        ListOperations listOperations = new ListOperations();
 
-        System.out.println(listOperations.compare());
-        System.out.println(listOperations.intersect());
-        System.out.println(listOperations.union());
-        System.out.println(listOperations.subtract());
+        System.out.println(listOperations.compare(first, second));
+        System.out.println(listOperations.intersect(first, second));
+        System.out.println(listOperations.union(first, second));
+        System.out.println(listOperations.subtract(first, second));
     }
 }
