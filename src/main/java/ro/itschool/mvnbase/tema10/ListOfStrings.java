@@ -11,19 +11,19 @@ public class ListOfStrings {
         words.add("apa");
         words.add("NSApusculita");
 
-        System.out.println(prefixCheck("NSA",words));
+        System.out.println(prefixRemove("NSA",words));
 
         System.out.println(concat(words));
     }
 
-    public static List<String> prefixCheck(String prefix, List<String> words) {
+    public static List<String> prefixRemove(String prefix, List<String> words) {
         List<String> result = new ArrayList<>();
         for (String element : words) {
             if (!element.contains(prefix)) {
                 result.add(element);
             }
         }
-        return result;
+        return result; //trebuia cu iterator
     }
 
     public static List<String> uniqueElements(List<String> words){
