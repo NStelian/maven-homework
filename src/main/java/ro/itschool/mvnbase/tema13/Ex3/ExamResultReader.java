@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class ExamResultReader {
     private final List<ExamResult> exams;
@@ -23,7 +24,7 @@ public class ExamResultReader {
         BufferedReader breader = new BufferedReader(new FileReader(path));
         String line;
         while ((line = breader.readLine()) != null) {
-            String[] exam = line.split("~");
+            String[] exam = line.split(Pattern.quote("|"));
             result.add(new ExamResult(exam[0], exam[1]));
         }
 
