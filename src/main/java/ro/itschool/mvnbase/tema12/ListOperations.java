@@ -1,7 +1,9 @@
 package ro.itschool.mvnbase.tema12;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class ListOperations {
     public boolean compare(List<String> first, List<String> second) {
@@ -10,35 +12,26 @@ public class ListOperations {
 
     public List<String> intersect(List<String> first, List<String> second) {
         List<String> result = new ArrayList<>();
-        for (String word : first) {
-            for (String word2 : second) {
-                if (word.equals(word2)) {
-                    result.add(word);
-                }
+        for (String word : second) {
+            if (first.contains(word)) {
+                result.add(word);
             }
         }
         return result;
     }
 
     public List<String> union(List<String> first, List<String> second) {
-        List<String> result = new ArrayList<>();
-        for (String word : first) {
-            if (!result.contains(word)) {
-                result.add(word);
-            }
-        }
+        Set<String> result = new HashSet<>(first);
         for (String word : second) {
-            if (!result.contains(word)) {
-                result.add(word);
-            }
+            result.add(word);
         }
-        return result;
+        return new ArrayList<>(result);
     }
 
     public List<String> subtract(List<String> first, List<String> second) {
         List<String> result = new ArrayList<>(first);
         for (String word : second) {
-            if (result.contains(word)) {
+            while (result.contains(word)) {
                 result.remove(word);
             }
         }
