@@ -24,7 +24,7 @@ public class ExamResultReader {
         BufferedReader breader = new BufferedReader(new FileReader(path));
         String line;
         while ((line = breader.readLine()) != null) {
-            String[] exam = line.split(Pattern.quote("|"));
+            String[] exam = line.split("\\|");
             result.add(new ExamResult(exam[0], exam[1]));
         }
 
