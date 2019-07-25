@@ -15,6 +15,7 @@ public class Main {
         System.out.println(countryStatistics.getLargestCountry());
         System.out.println(countryStatistics.getMostPeopleCountry());
         System.out.println(countryStatistics.getMostDenseCountry());
+
         CountryWriter countryWriter = new CountryWriter("src/main/resources/tema14/countriesWrite.txt");
         for (Country country : countryReader.getCountries()){
             countryWriter.writeCountry(country);

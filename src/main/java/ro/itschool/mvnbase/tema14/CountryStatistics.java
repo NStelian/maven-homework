@@ -74,11 +74,12 @@ public class CountryStatistics {
     }
 
     public Country getMostDenseCountry() {
-        long dense = Long.MAX_VALUE;
+        double dense = Double.MAX_VALUE;
         Country denseCountry = null;
         for (Country country : countries) {
-            if ((country.getArea() / country.getPopulation()) <= dense) {
-                dense = country.getArea() / country.getPopulation();
+            double crtDensity = (double)country.getArea() / country.getPopulation();
+            if (crtDensity <= dense) {
+                dense = crtDensity;
                 denseCountry = country;
             }
         }
