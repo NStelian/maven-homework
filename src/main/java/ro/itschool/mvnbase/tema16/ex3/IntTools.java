@@ -25,7 +25,7 @@ public class IntTools {
         return number%10;
     }
 
-    public int digitAt(int position) throws PositionException {
+    public int digitAt(int position) throws PositionException { // fa cu liste
         int copy=number;
         int i=0;
         int[] arrayNumber=new int[10];

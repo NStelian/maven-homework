@@ -5,7 +5,7 @@ public class DigitSum {
         if(number==0){
             return 0;
         } else{
-            return number%10+sum(number/10);
+            return Math.abs(number%10)+sum(number/10);
         }
     }
 }

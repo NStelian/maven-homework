@@ -7,14 +7,14 @@ public class BirthYearCalculator {
         return age;
     }
 
-    public BirthYearCalculator(int age) {
-        this.age = age;
-    }
-
-    public int calculate() throws InvalidAgeException {
+    public BirthYearCalculator(int age) throws InvalidAgeException {
         if(age<=0){
             throw new InvalidAgeException(age);
         }
+        this.age = age;
+    }
+
+    public int calculate() {
         return 2019-age;
     }
 }
