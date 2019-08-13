@@ -1,14 +1,7 @@
 package ro.itschool.mvnbase.tema20;
 
 public class AnyType<T extends Comparable> {
-    private T[] values;
-
-    public AnyType() {
-        this.values = (T[]) new Object[values.length];
-    }
-
     public T[] bubbleSort(T[] values) {
-        this.values = values;
         if (values == null) {
             return null;
         }
