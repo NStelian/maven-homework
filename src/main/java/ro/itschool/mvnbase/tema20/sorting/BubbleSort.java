@@ -1,4 +1,4 @@
-package ro.itschool.mvnbase.tema20;
+package ro.itschool.mvnbase.tema20.sorting;
 
 public class BubbleSort<T extends Comparable<T>> {
     public T[] sort(T[] values) {

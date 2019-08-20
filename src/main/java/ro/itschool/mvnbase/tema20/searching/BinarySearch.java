@@ -1,4 +1,4 @@
-package ro.itschool.mvnbase.tema20;
+package ro.itschool.mvnbase.tema20.searching;
 
 import java.util.Arrays;
 

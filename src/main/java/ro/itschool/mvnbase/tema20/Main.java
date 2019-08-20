@@ -1,5 +1,12 @@
 package ro.itschool.mvnbase.tema20;
 
+import ro.itschool.mvnbase.tema20.searching.BinarySearch;
+import ro.itschool.mvnbase.tema20.searching.LinearSearch;
+import ro.itschool.mvnbase.tema20.searching.RecursionLiniarSearch;
+import ro.itschool.mvnbase.tema20.sorting.BubbleSort;
+import ro.itschool.mvnbase.tema20.sorting.InsertSort;
+import ro.itschool.mvnbase.tema20.sorting.SelectionSort;
+
 import java.util.Arrays;
 
 public class Main {
@@ -19,9 +26,9 @@ public class Main {
         //System.out.println(Arrays.toString(insertSort2.sort(array2)));
 
         SelectionSort<Integer> selectionSort = new SelectionSort<>();
-        System.out.println(Arrays.toString(selectionSort.sort(array)));
+        //System.out.println(Arrays.toString(selectionSort.sort(array)));
         SelectionSort selectionSort2 = new SelectionSort();
-        System.out.println(Arrays.toString(selectionSort2.sort(array2)));
+        //System.out.println(Arrays.toString(selectionSort2.sort(array2)));
 
 
         LinearSearch<Integer> linearSearch = new LinearSearch<>();
@@ -35,8 +42,8 @@ public class Main {
         //System.out.println(binarySearch2.search(array2,"a"));
 
         RecursionLiniarSearch<Integer> recursionLiniarSearch = new RecursionLiniarSearch<>();
-        System.out.println(recursionLiniarSearch.search(array, 1));
+        //System.out.println(recursionLiniarSearch.search(array, 1));
         RecursionLiniarSearch<String> recursionLiniarSearch2 = new RecursionLiniarSearch<>();
-        System.out.println(recursionLiniarSearch2.search(array2, "a"));
+        //System.out.println(recursionLiniarSearch2.search(array2, "a"));
     }
 }

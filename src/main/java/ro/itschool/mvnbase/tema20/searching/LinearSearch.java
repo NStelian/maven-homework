@@ -1,4 +1,4 @@
-package ro.itschool.mvnbase.tema20;
+package ro.itschool.mvnbase.tema20.searching;
 
 public class LinearSearch<T extends Comparable<T>> {
     public boolean search(T[] elems, T elem) {
