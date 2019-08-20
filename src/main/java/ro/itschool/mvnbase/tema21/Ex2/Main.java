@@ -61,7 +61,6 @@ public class Main {
         System.out.println("Urgency high : " + deadlines);
 
 
-
         List<String> docsIds2 = documents.stream()
                 .filter(document -> document.getStatus() == IN_PROGRESS)
                 .map(document -> document.getDocumentId())
@@ -70,6 +69,6 @@ public class Main {
                 .filter(job -> docsIds2.contains(job.getDocumentId()))
                 .map(job -> LocalDateTime.now().until(job.getDeadLine(), ChronoUnit.DAYS))
                 .collect(Collectors.toList());
-        System.out.println(until);
+        System.out.println("Remaining days : " + until);
     }
 }
