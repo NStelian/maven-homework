@@ -14,7 +14,6 @@ public class Main {
                 hangman.guess(line.charAt(0));
             }else{
                 System.out.println("I said letter.. BOOM!");
-                break;
             }
         }
     }

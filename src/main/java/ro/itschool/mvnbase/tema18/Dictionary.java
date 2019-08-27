@@ -6,7 +6,13 @@ public class Dictionary {
     private final String[] words;
 
     public Dictionary() {
-        this.words = new String[]{"masa", "pian", "calculator", "canapea", "geam", "biblioteca"};
+        this.words = new String[]{
+                "masa",
+                "pian",
+                "calculator",
+                "canapea",
+                "geam",
+                "biblioteca"};
     }
 
     public String generate() {

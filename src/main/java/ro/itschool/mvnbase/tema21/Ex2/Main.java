@@ -5,6 +5,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static java.util.stream.Collectors.toList;
 import static ro.itschool.mvnbase.tema21.Ex2.Status.*;
 import static ro.itschool.mvnbase.tema21.Ex2.Urgency.*;
 
@@ -21,7 +22,7 @@ public class Main {
         List<String> docsIds = documents.stream()
                 .filter(document -> document.getStatus() == SUCCESS)
                 .map(document -> document.getDocumentId())
-                .collect(Collectors.toList());
+                .collect(toList());
         System.out.println("Succeed ids : " + docsIds);
 
         List<Job> jobs = List.of(
@@ -35,13 +36,13 @@ public class Main {
         List<String> jobsIds = jobs.stream()
                 .filter(job -> job.getDeadLine().isBefore(LocalDateTime.now().plusDays(1)))
                 .map(job -> job.getDocumentId())
-                .collect(Collectors.toList());
+                .collect(toList());
         System.out.println("Deadline 1 day : " + jobsIds);
 
         List<String> jobsIds2 = jobs.stream()
                 .filter(job -> job.getDeadLine().isBefore(LocalDateTime.now().plusDays(7)))
                 .map(job -> job.getDocumentId())
-                .collect(Collectors.toList());
+                .collect(toList());
         System.out.println("Deadline less than a week : " + jobsIds2);
 
 
@@ -57,18 +58,18 @@ public class Main {
         List<LocalDateTime> deadlines = jobs.stream()
                 .filter(job -> job.getUrgency() == HIGH)
                 .map(job -> job.getDeadLine())
-                .collect(Collectors.toList());
+                .collect(toList());
         System.out.println("Urgency high : " + deadlines);
 
 
         List<String> docsIds2 = documents.stream()
                 .filter(document -> document.getStatus() == IN_PROGRESS)
                 .map(document -> document.getDocumentId())
-                .collect(Collectors.toList());
+                .collect(toList());
         List<Long> until = jobs.stream()
                 .filter(job -> docsIds2.contains(job.getDocumentId()))
                 .map(job -> LocalDateTime.now().until(job.getDeadLine(), ChronoUnit.DAYS))
-                .collect(Collectors.toList());
+                .collect(toList());
         System.out.println("Remaining days : " + until);
     }
 }

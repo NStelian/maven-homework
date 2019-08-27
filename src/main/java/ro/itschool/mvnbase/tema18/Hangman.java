@@ -8,7 +8,7 @@ public class Hangman {
     public Hangman() {
         this.dictionary = new Dictionary();
         this.word = dictionary.generate();
-        this.found = initializeFound(word);
+        this.found = initializeFound(word); //found = "_".repeat(word.length());
     }
 
     public String getWord() {
@@ -20,6 +20,7 @@ public class Hangman {
     }
 
     public boolean finished() {
+        //return found.equals(word);
         if (found.contains("_")) {
             return false;
         }
@@ -36,6 +37,7 @@ public class Hangman {
     }
 
     public boolean guess(char c) {
+        // fa un bool=false,in while ii true si returneaza-l
         if (word.indexOf(c) != -1) {
             String copy = word;
             while (copy.indexOf(c) != -1) {
